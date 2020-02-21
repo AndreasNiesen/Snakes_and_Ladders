@@ -1,8 +1,10 @@
 import random
 
+solves_max = 100000000 #Amount of games to finish
+
 field_start = 1
 field_cur = field_start
-fields_special = {
+fields_special = {		#10 ladders, 11 snakes
 	4: 16,	#ladder
 	12: 33,	#ladder
 	18: 22,	#ladder
@@ -25,11 +27,10 @@ fields_special = {
 	97: 65,	#snake
 	99: 58	#snake
 	}
-solves = 0
-rolls_solved = 0
-avrg = 0.0
-solves_max = 100000000 #100.000.000
-rolls_cur = 0
+solves = 0			#amount of games finished
+rolls_solved = 0	#amount of overall dice rolls
+avrg = 0.0			#average dice rolls per finished game (rolls_solved/solves)
+rolls_cur = 0		#dice rolls for current game
 random.seed()
 shortest = 100000
 longest = 0
